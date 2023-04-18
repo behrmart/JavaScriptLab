@@ -10,3 +10,7 @@ var mascotas = parseInt (numeroGatos) + parseInt (numeroPerros);
 console.log ("Nombre: " + nombreUsuario + " " + apellidoPaterno + " " + apellidoMaterno + " Nacionalidad: " + nacionalidad);
 console.log ("Tiene " + numeroGatos + " Gatos y " + numeroPerros + " Perros");
 console.log ("En Total tiene " + mascotas + " mascotas.")
+
+document.write("Nombre: " + nombreUsuario + " " + apellidoPaterno + " " + apellidoMaterno + " Nacionalidad: " + nacionalidad);
+document.write("Tiene " + numeroGatos + " Gatos y " + numeroPerros + " Perros");
+document.write("En Total tiene " + mascotas + " mascotas.");
