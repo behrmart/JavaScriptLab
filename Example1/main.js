@@ -11,6 +11,6 @@ console.log ("Nombre: " + nombreUsuario + " " + apellidoPaterno + " " + apellido
 console.log ("Tiene " + numeroGatos + " Gatos y " + numeroPerros + " Perros");
 console.log ("En Total tiene " + mascotas + " mascotas.")
 
-document.write("Nombre: " + nombreUsuario + " " + apellidoPaterno + " " + apellidoMaterno + " Nacionalidad: " + nacionalidad);
-document.write("Tiene " + numeroGatos + " Gatos y " + numeroPerros + " Perros");
+document.write("Nombre: " + nombreUsuario + " " + apellidoPaterno + " " + apellidoMaterno + " Nacionalidad: " + nacionalidad + "\n");
+document.write("Tiene " + numeroGatos + " Gatos y " + numeroPerros + " Perros \n");
 document.write("En Total tiene " + mascotas + " mascotas.");
