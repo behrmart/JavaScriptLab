@@ -64,6 +64,21 @@ class ArbolBinario {
         }
     }
 
+    // Método para encontrar el nodo más pequeño
+    obtenerMinimo() {
+    if (this.raiz === null) {
+      return null; // El árbol está vacío
+    }
+
+    let nodoActual = this.raiz;
+    while (nodoActual.izquierda !== null) {
+      nodoActual = nodoActual.izquierda;
+    }
+
+    return nodoActual;
+  }
+
+
     // Ejercicio: Eliminar un nodo especifico y verificar si el nodo tiene hijos. 
     // En caso de que el nodo tenga hijos reestructurar la parte del arbol donde elimina en nodo
     // y poner a los hijos en la manera correcta
@@ -149,6 +164,7 @@ arbol.insertar(40);
 arbol.insertar(60);
 
 arbol.enOrdenTrasversal();
+console.log (`Minimo: ${arbol.obtenerMinimo()}`);
 
 console.log('Eliminando el nodo 30');
 arbol.borrarDato(30);
@@ -196,3 +212,42 @@ function miembro (persona){     // Normalito, sin operadores ternarios
     console.log(persona ? 'Paga 5 por el periodico ternary' : 'Paga 10 por el periodico ternary'); // con operadores ternarios
 }
 miembro(personaDato)
+
+
+// Implementa la función obtenerMinimo() que devuelve el valor mínimo almacenado en el árbol.
+
+// Implementa la función obtenerMaximo() que devuelve el valor máximo almacenado en el árbol.
+
+// Implementa la función obtenerCantidadNodos() que devuelve el número total de nodos en el árbol.
+
+//Implementa la función obtenerSumaValores() que devuelve la suma de todos los valores almacenados en el árbol.
+
+
+function obtenerMinimo(nodo) {
+    let actual = nodo;
+    while (actual.izquierda !== null) {
+      actual = actual.izquierda;
+    }
+    return actual.valor;
+  }
+  
+  console.log(obtenerMinimo(arbol.raiz))
+  
+  function obtenerMaximo(nodo) {
+    let actual = nodo;
+    while (actual.derecha !== null) {
+      actual = actual.derecha;
+    }
+    return actual.valor;
+  }
+  
+  console.log(obtenerMaximo(arbol.raiz))
+  
+  function contarNodos(nodo) {
+    if(nodo === null) {
+      return null
+    }
+    return 1 + contarNodos(nodo.izquierda) + contarNodos(nodo.derecha);
+  }
+  
+  console.log(contarNodos(arbol.raiz));
